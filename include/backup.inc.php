@@ -112,7 +112,7 @@ function backupDBs($hostname, $username, $password, $prefix, $post_backup_query 
   }
   
   $query = 'SHOW DATABASES';
-  $result = mysqli_query($query);
+  $result = mysqli_query($link, $query);
   if (!$result) {
       die('Query failed: ' . mysqli_error());
   }
